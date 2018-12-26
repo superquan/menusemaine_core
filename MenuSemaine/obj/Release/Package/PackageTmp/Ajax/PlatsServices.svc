@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MenuSemaine.Ajax.PlatsServices" CodeBehind="PlatsServices.svc.cs" %>

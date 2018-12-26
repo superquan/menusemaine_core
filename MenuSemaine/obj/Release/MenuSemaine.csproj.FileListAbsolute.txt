@@ -1,0 +1,4 @@
+Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\bin\MenuSemaine.dll
+Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\bin\MenuSemaine.pdb
+Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\obj\Release\MenuSemaine.dll
+Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\obj\Release\MenuSemaine.pdb
