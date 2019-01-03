@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MenuSemaine_Core.Library;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +34,12 @@ namespace MenuSemaine_Core
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // read et inject the connection string to dbcontext
+            string dbPath = Configuration["AppSettings:DataFilePath"];
+            Console.WriteLine(string.Format("=============={0} * =======================", dbPath));
+
+            services.AddTransient<MSCDB>(opts => new MSCDB(dbPath));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

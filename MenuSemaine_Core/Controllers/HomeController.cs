@@ -5,19 +5,49 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MenuSemaine_Core.Models;
+using MenuSemaine_Core.Library;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MenuSemaine_Core.Controllers
 {
     public class HomeController : Controller
     {
+        internal readonly MSCDB _db;
+        private readonly IHostingEnvironment _env;
+
+        public HomeController(MSCDB mscDB, IHostingEnvironment env)
+        {
+            this._db = mscDB;
+            this._env = env;
+        }
+
         public IActionResult Index()
+        {
+            var allPlats = new List<Plat>();
+            
+            using (var db = _db.DataBase(this._env.WebRootPath))
+            {
+                var plats = db.GetCollection<Plat>("Plats");
+
+                allPlats.AddRange(plats.FindAll());
+            }
+
+            return View(allPlats);
+        }
+
+        public IActionResult InsertPlat()
         {
             return View();
         }
 
-        public IActionResult About()
+        [HttpPost]
+        public IActionResult InsertPlat([Bind("Name,Type")] Plat plat)
         {
-            ViewData["Message"] = "Your application description page.";
+            using (var db = _db.DataBase(this._env.WebRootPath))
+            {
+                var plats = db.GetCollection<Plat>("Plats");
+                plats.Insert(new Plat { ID = Guid.NewGuid().ToString(), Name = plat.Name, Type = plat.Type});
+            }
 
             return View();
         }

@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MenuSemaine_Core.Models.Plat>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <span>@item.Name</span>
+        </li>
+    }
+</ul>
