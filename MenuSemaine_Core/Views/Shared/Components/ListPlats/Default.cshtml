@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<MenuSemaine_Core.Models.Plat>
 
-<ul>
+<ul class="list-group">
     @foreach (var item in Model)
     {
-        <li>
-            <span>@item.Name</span>
-        </li>
+    <li class="list-group-item list-group-item-action">
+        <span>@item.Name</span>
+        &nbsp;-&nbsp;
+        <span>@item.Type</span>
+    </li>
     }
 </ul>

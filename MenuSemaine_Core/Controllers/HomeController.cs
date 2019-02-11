@@ -49,7 +49,7 @@ namespace MenuSemaine_Core.Controllers
                 plats.Insert(new Plat { ID = Guid.NewGuid().ToString(), Name = plat.Name, Type = plat.Type});
             }
 
-            return View();
+            return ViewComponent("ListPlats");
         }
 
         public IActionResult Contact()
