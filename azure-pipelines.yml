@@ -15,3 +15,5 @@ variables:
 steps:
 - script: dotnet build ./MenuSemaine_Core --configuration $(buildConfiguration)
   displayName: 'dotnet build ./MenuSemaine_Core $(buildConfiguration)'
+
+- task: PublishBuildArtifacts@1
