@@ -2,3 +2,10 @@ Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\bin\MenuSemaine.dll
 Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\bin\MenuSemaine.pdb
 Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\obj\Debug\MenuSemaine.dll
 Z:\Projets\MenuSemaine\MenuSemaine\MenuSemaine\obj\Debug\MenuSemaine.pdb
+E:\Github\menusemaine_core\MenuSemaine\bin\MenuSemaine.dll.config
+E:\Github\menusemaine_core\MenuSemaine\bin\MenuSemaine.dll
+E:\Github\menusemaine_core\MenuSemaine\bin\MenuSemaine.pdb
+E:\Github\menusemaine_core\MenuSemaine\obj\Debug\MenuSemaine.csprojAssemblyReference.cache
+E:\Github\menusemaine_core\MenuSemaine\obj\Debug\MenuSemaine.csproj.CoreCompileInputs.cache
+E:\Github\menusemaine_core\MenuSemaine\obj\Debug\MenuSemaine.dll
+E:\Github\menusemaine_core\MenuSemaine\obj\Debug\MenuSemaine.pdb
