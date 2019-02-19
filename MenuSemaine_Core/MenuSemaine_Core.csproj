@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Library\Bin\" />
     <Folder Include="wwwroot\data\" />
     <Folder Include="wwwroot\lib\jquery-ajax-unobtrusive\" />
   </ItemGroup>
