@@ -21,8 +21,9 @@ steps:
 
 - task: PublishBuildArtifacts@1
 
-- task: DotNetCoreCLI@2
+- script: dotnet test ./MenuSemaineCore_Test --logger trx
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
-    command: test
-    projects: '**/*_Test/*.csproj'
-    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
